@@ -1,0 +1,3 @@
+FROM 3620655/myrepo:jenkins_server
+EXPOSE 8080
+

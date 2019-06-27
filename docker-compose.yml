@@ -1,0 +1,19 @@
+version: "3"
+services:
+  jenkins:
+    build: ./jenkins/
+    links:
+      - sonar
+    ports:
+      - "8080:8080"  
+    networks:
+      - backend
+  sonar:
+    build: ./sonar/
+    networks:
+      - backend
+    ports:
+      - "9000:9000" 
+networks:
+ backend:
+    driver: "bridge"

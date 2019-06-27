@@ -1,0 +1,2 @@
+FROM 3620655/myrpeo:sonar_ubuntu_container
+EXPOSE 9000
