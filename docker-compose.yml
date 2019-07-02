@@ -3,6 +3,8 @@ services:
   jenkins:
     build: ./jenkins/
     command: sudo /etc/init.d/jenkins start
+    tty: true
+    stdin_open: true
     links:
       - sonar
     ports:
@@ -12,6 +14,8 @@ services:
   sonar:
     build: ./sonar/
     command: /home/sonaradmin/sonarqube-7.5/bin/linux-x86-64/sonar.sh
+    tty: true
+    stdin_open: true
     networks:
       - backend
     ports:
