@@ -2,6 +2,7 @@ version: "3"
 services:
   jenkins:
     build: ./jenkins/
+    command: sudo /etc/init.d/jenkins start
     links:
       - sonar
     ports:
@@ -10,6 +11,7 @@ services:
       - backend
   sonar:
     build: ./sonar/
+    command: /home/sonaradmin/sonarqube-7.5/bin/linux-x86-64/sonar.sh
     networks:
       - backend
     ports:
