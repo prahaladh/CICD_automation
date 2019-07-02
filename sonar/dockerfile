@@ -1,2 +1,3 @@
-FROM 3620655/myrpeo:sonar_ubuntu_container
+FROM 3620665/myrpeo:sonar_ubuntu_container
 EXPOSE 9000
+CMD sh /home/sonaradmin/sonarqube-7.5/bin/linux-x86-64/sonar.sh
