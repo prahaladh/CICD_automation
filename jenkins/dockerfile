@@ -1,3 +1,2 @@
 FROM 3620665/myrepo:jenkins_server
 EXPOSE 8080
-CMD sudo /etc/init.d/jenkins start
